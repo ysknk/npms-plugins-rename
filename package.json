@@ -1,0 +1,35 @@
+{
+  "name": "glob-rename",
+  "version": "1.0.0",
+  "description": "glob rename",
+  "main": "index.js",
+  "scripts": {
+    "test": "node bin/glob-rename.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ysknk/glob-rename.git"
+  },
+  "bin": {
+    "glob-rename": "./bin/glob-rename.js"
+  },
+  "type": "module",
+  "keywords": [
+    "node",
+    "glob",
+    "rename"
+  ],
+  "author": "ysknk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ysknk/glob-rename/issues"
+  },
+  "homepage": "https://github.com/ysknk/glob-rename#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "glob": "^8.0.3",
+    "node-package-utilities": "github:ysknk/node-package-utilities",
+    "path": "^0.12.7",
+    "yargs": "^17.5.1"
+  }
+}
