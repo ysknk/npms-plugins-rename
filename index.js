@@ -58,7 +58,8 @@ const onRename = async (file) => {
   const basename = path.basename(result)
   const dirname = result.replace(basename, '')
 
-  if (!isAccess(dirname)) {
+  const access = await isAccess(dirname)
+  if (!access) {
     await fs.mkdir(dirname, { recursive: true }, (err) => {
       utils.message.failure(err)
     })
