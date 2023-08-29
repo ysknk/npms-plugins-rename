@@ -11,30 +11,12 @@ import path from 'path'
 
 import utils from 'node-package-utilities'
 
-import {
-  config,
-  find,
-  before,
-  after,
-  prefix,
-  suffix,
-  ignore,
-  dryrun,
-  overwrite
-} from './lib/arguments.js'
+import argv from './lib/arguments.js'
 
-let options = {
-  find,
-  before,
-  after,
-  prefix,
-  suffix,
-  dryrun,
-  overwrite
-}
+let options = argv
 
 const globOptions = {
-  ignore
+  ignore: argv.ignore
 }
 
 const onSequence = (file) => {
@@ -78,7 +60,7 @@ const onRename = async (file) => {
 
 utils.message.begin()
 
-glob(find, globOptions, (err, files) => {
+glob(options.find, globOptions, (err, files) => {
   if (err) {
     console.log(err)
     return
@@ -91,7 +73,7 @@ glob(find, globOptions, (err, files) => {
 
       // NOTE: fileconfig
       const ext = path.extname(file)
-      const fileconfig = utils.value.fromPath(file, ext, config) || {}
+      const fileconfig = utils.value.fromPath(file, ext, argv.config) || {}
       options = Object.assign({}, options.config, fileconfig)
 
       const renamepath = await onRename(filepath)
