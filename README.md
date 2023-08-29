@@ -1,4 +1,4 @@
-# glob-rename
+# npms-plugins-rename
 
 ## Description
 
@@ -12,7 +12,7 @@ globでファイルを指定、ファイルをリネーム（ディレクトリ�
 ## Install
 
 ```sh
-npm i -D https://github.com/ysknk/glob-rename.git
+npm i -D https://github.com/ysknk/npms-plugins-rename.git
 ```
 
 ## Usage
@@ -29,5 +29,5 @@ npm i -D https://github.com/ysknk/glob-rename.git
 
 ```sh
 # check arguments help
-npm run glob-rename -- --help
+npm run npms-plugins-rename -- --help
 ```
