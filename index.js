@@ -73,7 +73,7 @@ glob(options.find, globOptions, (err, files) => {
 
       // NOTE: fileconfig
       const ext = path.extname(file)
-      const fileconfig = utils.value.fromPath(file, ext, argv.config) || {}
+      const fileconfig = utils.value.fromPath(file, ext, options.config) || {}
       options = Object.assign({}, options.config, fileconfig)
 
       const renamepath = await onRename(filepath)
