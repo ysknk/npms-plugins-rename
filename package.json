@@ -11,7 +11,7 @@
     "url": "git+ssh://git@github.com/ysknk/npms-plugins-rename.git"
   },
   "bin": {
-    "glob-rename": "./bin/rename.js"
+    "rename": "./bin/rename.js"
   },
   "type": "module",
   "keywords": [
