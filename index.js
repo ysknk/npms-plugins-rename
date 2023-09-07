@@ -13,8 +13,6 @@ import utils from 'node-package-utilities'
 
 import argv, { config } from './lib/arguments.js'
 
-import argv from './lib/arguments.js'
-
 let options = argv
 
 const globOptions = {
