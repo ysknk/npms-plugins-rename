@@ -11,6 +11,8 @@ import path from 'path'
 
 import utils from 'node-package-utilities'
 
+import argv, { config } from './lib/arguments.js'
+
 import argv from './lib/arguments.js'
 
 let options = argv
@@ -73,8 +75,8 @@ glob(options.find, globOptions, (err, files) => {
 
       // NOTE: fileconfig
       const ext = path.extname(file)
-      const fileconfig = utils.value.fromPath(file, ext, options.config) || {}
-      options = Object.assign({}, options.config, fileconfig)
+      const fileconfig = utils.value.fromPath(file, ext, config) || {}
+      options = Object.assign({}, config, fileconfig)
 
       const renamepath = await onRename(filepath)
 
